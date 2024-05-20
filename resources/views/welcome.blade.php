@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="ar">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,11 +7,13 @@
         <title>Laravel</title>
 
       
+        <link rel="stylesheet" href="{{asset('css/app.css')}}">
     </head>
     <body class="antialiased">
         <div id="app">
             <layout></layout>
 </div>
+
         <script src="{{asset('js/app.js')}}"></script>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

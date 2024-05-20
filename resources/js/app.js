@@ -1,43 +1,36 @@
-
-require('./bootstrap');
+require("./bootstrap");
 
 import { createApp } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
-import layout from './components/layout.vue';
 
-import home from './components/home.vue';
-import about from './components/about.vue';
+// layout
+import Layout from "./layouts/default.vue";
 
+// pages
+import Home from "./pages/home.vue";
+import About from "./pages/about.vue";
+
+// routes
 const router = createRouter({
     history: createWebHistory(),
-  
+
     routes: [
-      {
-        path: "/:catchAll(.*)",
-      
-      },
-     
-      
-      {
-        path:"/",
-      
-      component: home,
-      meta: {title: 'home'},
+        {
+            path: "/:catchAll(.*)",
+        },
 
-      },
-      {
-        path: "/about",
-      
-      component: about,
-      meta: {title: 'about'},
+        {
+            path: "/",
 
-      }
-       /*
-      {
-      path: '/details', 
-      component: destination_details,
-      params: {end:':id',key:':key'}  
-    }*/
-          ]
-  });
-  createApp(layout).use(router).mount("#app");
+            component: Home,
+            meta: { title: "home" },
+        },
+        {
+            path: "/about",
+
+            component: About,
+            meta: { title: "about" },
+        },
+    ],
+});
+createApp(Layout).use(router).mount("#app");
