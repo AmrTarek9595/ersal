@@ -7,8 +7,10 @@ php:
     not-name:
       - index.php
       - server.php
+      - mix.browserSync('127.0.0.1:8000');
 js:
   finder:
     not-name:
       - webpack.mix.js
+     
 css: true
